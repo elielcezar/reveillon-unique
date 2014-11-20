@@ -1,0 +1,195 @@
+body{
+	padding: 0;	
+	background: #fff !important;	
+}
+
+.container{max-width: 1100px}
+
+ .main {
+      float: left;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+
+
+/*--- ESTILOS GERAIS  -------------------------------------------------------------------*/
+img.img-responsive{margin: auto;}
+
+a{ color: #3a99d3; }
+a:hover{color: #15488a;}
+
+p{
+	font-size: 14px;
+	margin: 20px 0;
+}
+
+/* formularios */
+form input[type="text"],
+form textarea,
+form select,
+form .form-email,
+form input[type="password"]{
+	padding: 7px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #d1d1d1;	
+}
+form input[type="submit"]{	
+	background: #4c71be;
+	font-weight: bold;
+	color: #fff;
+	border: none;
+	padding: 6px; 
+	float: left;
+	border-radius: 5px;
+}
+form input[type="submit"]:hover{
+	background: #163d8e;	
+}
+
+/* animacoes */
+.delay4{
+	animation-delay: .4s;
+	-moz-animation-delay: .4s;
+	-webkit-animation-delay: .4s;
+	-o-animation-delay: .4s;
+	transition-delay: .4s;
+	-webkit-transition-delay: .4s;
+	-moz-transition-delay: .4s;
+	-o-transition-delay: .4s;
+}
+.delay6{
+	animation-delay: .6s;
+	-moz-animation-delay: .6s;
+	-webkit-animation-delay: .6s;
+	-o-animation-delay: .6s;
+	transition-delay: .6s;
+	-webkit-transition-delay: .6s;
+	-moz-transition-delay: .6s;
+	-o-transition-delay: .6s;
+}
+.delay8{
+	animation-delay: .8s;
+	-moz-animation-delay: .8s;
+	-webkit-animation-delay: .8s;
+	-o-animation-delay: .8s;
+	transition-delay: .8s;
+	-webkit-transition-delay: .8s;
+	-moz-transition-delay: .8s;
+	-o-transition-delay: .8s;
+}
+.delay10{
+	animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	transition-delay: 1s;
+	-webkit-transition-delay: 1s;
+	-moz-transition-delay: 1s;
+	-o-transition-delay: 1s;
+}
+.delay12{
+	animation-delay: 1.2s;
+	-moz-animation-delay: 1.2s;
+	-webkit-animation-delay: 1.2s;
+	-o-animation-delay: 1.2s;
+	transition-delay: 1.2s;
+	-webkit-transition-delay: 1.2s;
+	-moz-transition-delay: 1.2s;
+	-o-transition-delay: 1.2s;
+}
+
+section{min-height: 200px;}
+
+
+/*--- MENU -------------------------------------------------------------------*/
+#menu-principal{		
+	text-align: center;	
+	float: none;	
+	font-family: 'Times New Roman', serif;
+}
+#menu-principal li{	
+	display: inline-block;
+	float: none;
+}
+#topnav{		
+	background: transparent url("../img/overlay.png");
+	text-align: center;
+	border-bottom: none;
+	z-index: 1;		
+}
+#topnav a{
+	color: #fff;
+	text-transform: uppercase;	
+}
+#topnav li.active a,
+#topnav a:hover{background: #666;}
+
+
+/*--- TOPO -----------------------------------------------------------------------*/
+#topo{
+	padding-top: 100px;
+	overflow: hidden;	
+	background: transparent url("../img/bg_topo.jpg") top center fixed no-repeat;
+}
+#topo .logo{margin-bottom: 75px;}
+
+
+/*--- EVENTO -----------------------------------------------------------------------*/
+#evento{	
+	text-align: center;
+	position: relative;
+	background: #fff url("../img/bg_branco.png") top center repeat-x;
+}
+#evento .logos{	
+	margin: auto;
+	max-width: 500px;	
+	margin-top: -60px;
+}
+
+#evento h3{
+	font-size: 48px;
+	font-style: italic;
+	letter-spacing: -1px;
+	margin-top: 70px;
+	font-weight: bold;
+	color: #d2d2d2;
+}
+
+
+/*--- ATRACOES -----------------------------------------------------------------------*/
+#atracoes{		
+	position: relative;		
+	text-align: center;
+	background: #fff url("../img/bg_cinza.png") bottom center repeat-x;
+}
+
+#atracoes p{text-align: justify;}
+
+
+/*--- CONTATO -----------------------------------------------------------------------*/
+#contato{		
+	position: relative;		
+	text-align: center;
+	background: #fff url("../img/bg_contato.jpg") top center no-repeat;
+}
+
+
+
+
+/*--- RODAPE -------------------------------------------------------------------*/
+footer{	
+	border-top: 1px solid #ccc;
+	float: left;
+	width: 100%;
+	margin-top: 25px;
+	color: #666;
+	padding-top: 20px;
+	font-size: 11px;
+	line-height: 18px;
+}
+footer a{font-weight: bold;	}
+
+

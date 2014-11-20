@@ -1,0 +1,427 @@
+
+.front{font-size: 16px;}
+
+.front section {		
+	padding-top: 50px;
+	min-height: 660px;
+	width: 100%;
+	min-width: 100%;
+	padding-bottom: 120px;
+}
+
+
+.front h2{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800; 
+	margin-bottom: 60px;
+}
+
+
+.front .container{overflow: hidden;}
+
+
+/****************** NAVIGATION STYLES *************************/
+
+#menu-principal{		
+	text-align: center;	
+	float: none;	
+}
+
+#menu-principal li{	
+	display: inline-block;
+	float: none;
+}
+
+.front #topnav{		
+	background: #0094d9;
+	text-align: center;
+	border-bottom: none;
+	z-index: 1;	
+	box-shadow: 0 5px 10px #2461a0;
+}
+
+.front #topnav a{
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;	
+	font-weight: 800;
+	font-size: 21px;
+}
+.front #topnav a:hover{background: #0e4089;}
+
+
+/*--- menu-secoes ---*/
+.front #menu-secoes{
+	width: 20px;		
+	position: fixed;
+	top: 30%;
+	right: 20px;
+}
+
+.front #menu-secoes li{
+	text-indent: -5000em;
+	width: 20px;
+	height: 20px;	
+	overflow: hidden;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	background: #95bae3;
+	border: 1px solid #fff;
+}
+
+.front #menu-secoes li.active{
+	background: #bddcee;
+	border: 1px solid #95bae3;
+}
+
+
+
+/*--- TOPO ---------------------------------------------------------------------------------------------*/
+
+.front #topo{	
+	padding-top: 150px;	
+	text-align: center !important;
+	padding-bottom:40px;	
+	background: #1f65b5 url(../img/bg1.png) top center repeat-x;
+	position: relative;	
+}
+
+.front #topo img{
+	margin: auto;
+	display: inline-block;
+}
+
+.front #topo .logo{
+	margin-bottom: 80px; 
+	width: 100%;
+	background: #fff;
+	padding: 25px 0;
+}
+
+.front #topo .seta{margin-bottom: 40px;}
+
+.front .nuvens{
+	position: absolute;
+	top: 540px;
+}
+
+.front .page-header{
+	margin-top: 20px;
+	border: none;
+}
+
+/*--- BLOCO 1 ---------------------------------------------------------------------------------------------*/
+.front #Section-1{
+	background:#fafafa url(../img/nuvem1.png) 700px 70px no-repeat;
+	padding-top: 120px;	
+	color: #888;
+	text-align: center;
+}
+
+.front #Section-1 .wrapper{	
+	margin: 40px 0;	
+	width: 100%; 	
+	position: relative;
+}
+	.front #Section-1 .line{ 
+		width: 7px;		
+		margin: auto;		
+		height: 5px;
+		position: absolute;
+		top: 0;
+		left: 49.8%;
+		transition: 1s;
+		background: transparent url(../img/line1.png) center center repeat-y; 
+	}
+	.front #Section-1 .line.open{height: 400px;}
+
+.front #Section-1 .fundacao .conteudo{
+	margin: 30px 0 0 0; 
+	padding: 0;
+}
+.front #Section-1 .fundacao .conteudo p{	
+	max-width: 350px;
+	float: right;
+	display: block;
+}
+
+.front #Section-1 .row.estados{	margin: 50px 0;}
+.front #Section-1 .estados .conteudo{margin-top: 12px;}
+
+.front #Section-1 .qualificacao .conteudo{
+	margin-top: 30px;
+	padding: 0;
+}
+.front #Section-1 .qualificacao .conteudo p{	
+	max-width: 300px;
+	float: right;	
+	display: block;
+}
+.front #Section-1 .row .circulo{
+	text-align: center; 
+	padding: 0; 
+	margin: 0;
+	/*max-width: 125px;*/
+}
+.front #Section-1 .row .circulo img{display: inline-block;}
+
+
+/*--- BLOCO 2 ---------------------------------------------------------------------------------------------*/
+.front #Section-2{
+	background:#3a99d3 url(../img/nuvem0.png) -100px 70px no-repeat;
+	color: #fff;
+}
+
+.front #Section-2 .page-header{height: 100px;}
+
+.front #Section-2 .seguros{
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 500px;
+	float: left;
+	list-style-type: none;
+	position: relative;
+}
+
+.front #Section-2 .seguros li{	
+	width: 25%;
+	float: left;	
+	margin-bottom: 25px;
+	text-align: center;
+	position: absolute;
+	background-width: 100%;
+}
+
+.front #Section-2 .seguros .automovel{
+	background: transparent url(../img/nuvem2.png) top center no-repeat;
+	padding-top: 70px;
+	top: 40px;
+	left: -40px;
+}
+.front #Section-2 .seguros .motocicleta{
+	background: transparent url(../img/nuvem3.png) top center no-repeat;
+	padding-top: 110px;
+	top: 0;
+	left: 290px;
+}
+.front #Section-2 .seguros .residencial{
+	background: transparent url(../img/nuvem4.png) top center no-repeat;
+	padding-top: 90px;
+	top: 0;
+	left: 580px;
+}
+.front #Section-2 .seguros .empresarial{
+	background: transparent url(../img/nuvem5.png) top center no-repeat;
+	padding-top: 80px;
+	top: 60px;
+	left: 820px;
+}
+.front #Section-2 .seguros .condominio{
+	background: transparent url(../img/nuvem6.png) top center no-repeat;
+	padding-top: 120px;
+	top: 150px;
+	left: 40px;
+}
+.front #Section-2 .seguros .nautico{
+	background: transparent url(../img/nuvem7.png) top center no-repeat;
+	padding-top: 70px;
+	top: 150px;
+	left: 410px;
+}
+.front #Section-2 .seguros .equipamentos{
+	background: transparent url(../img/nuvem8.png) top center no-repeat;
+	padding-top: 60px;
+	top: 120px;
+	left: 640px;
+}
+.front #Section-2 .seguros .transporte{
+	background: transparent url(../img/nuvem9.png) top center no-repeat;
+	padding-top: 100px;
+	top: 180px;
+	left: 870px;
+}
+.front #Section-2 .seguros .garantia{
+	background: transparent url(../img/nuvem10.png) top center no-repeat;
+	padding-top: 80px;
+	top: 300px;
+	left: -40px;
+}
+.front #Section-2 .seguros .rcdo{
+	background: transparent url(../img/nuvem11.png) top center no-repeat;
+	padding-top: 80px;
+	top: 230px;
+	left: 260px;
+}
+.front #Section-2 .seguros .vida{
+	background: transparent url(../img/nuvem12.png) top center no-repeat;
+	padding-top: 90px;
+	top: 240px;
+	left: 630px;
+}
+.front #Section-2 .seguros .saude{
+	background: transparent url(../img/nuvem13.png) top center no-repeat;
+	padding-top: 90px;
+	top: 320px;
+	left: 810px;
+}
+.front #Section-2 .seguros .previdencia{
+	background: transparent url(../img/nuvem2.png) top center no-repeat;
+	padding-top: 80px;
+	top: 340px;
+	left: 160px;
+}
+.front #Section-2 .seguros .viagem{
+	background: transparent url(../img/nuvem3.png) top center no-repeat;
+	padding-top: 120px;
+	top: 310px;
+	left: 460px;
+}
+ 
+/*--- BLOCO 3 ---------------------------------------------------------------------------------------------*/ 
+.front #Section-3{
+	background:#1a4996 url(../img/nuvem1.png) 700px 20px no-repeat;
+	color: #fff;
+} 
+
+.front #Section-3 .container{min-height: 650px;}
+
+.front #Section-3 .img-pesquisa{margin-top: 50px;}
+
+/*.front #Section-3 ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 50px 0 0 0;
+}
+
+.front #Section-3 ul li{
+	padding: 10px 0 10px 50px;
+	margin-bottom: 25px;
+	background: transparent url(../img/marcador1.png) center left no-repeat;	
+}*/
+
+.front #Section-3 .postit.p001{
+	position: absolute;
+	top: 20px; 
+	left: 250px;
+}
+.front #Section-3 .postit.p002{
+	position: absolute;
+	top: -50px; 
+	left: -100px;
+}
+.front #Section-3 .postit.p003{
+	position: absolute;
+	top: 220px; 
+	left: 0;
+}
+
+
+/*--- BLOCO 4 ---------------------------------------------------------------------------------------------*/
+.front #Section-4{
+	background:#fafafa url(../img/nuvem0.png) -100px 50px no-repeat;	
+} 
+
+.front #Section-4 .page-header{height: 80px;}
+
+.front #Section-4 .container{min-height: 650px;}
+
+.front #Section-4 .img-sede{margin-top: 40px;}
+
+.front #Section-4 .postit.p004{
+	position: absolute;
+	top: 0; 
+	left: 200px;
+}
+.front #Section-4 .postit.p005{
+	position: absolute;
+	top: 150px; 
+	left: -100px;
+}
+.front #Section-4 .postit.p006{
+	position: absolute;
+	top: 275px; 
+	left: 180px;
+}
+
+
+
+/*--- BLOCO 5 ---------------------------------------------------------------------------------------------*/
+.front #Section-5{
+	background:#3a99d3 url(../img/nuvem1.png) 700px 50px no-repeat;	
+	color: #fff;
+} 
+.front #Section-5 .container{height: 800px;}
+
+.front #Section-5 .page-header{height: 90px;}
+
+
+.front #Section-5 ul{
+	list-style-type: none;
+	padding: 50px 0 0 0;
+	margin: 0;
+}
+.front #Section-5 ul li{
+	padding: 10px 0 10px 50px;
+	margin-bottom: 30px;
+	background: transparent url(../img/marcador1.png) center left no-repeat;	
+}
+
+.front #Section-5 ul li a{
+	font-weight: bold; 
+	text-decoration: underline; 
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.front #Section-5 .postit.p007{
+	position: absolute;
+	top: 400px; 
+	left: -350px;
+}
+.front #Section-5 .postit.p008{
+	position: absolute;
+	top: 400px; 
+	left: -50px;
+}
+.front #Section-5 .postit.p009{
+	position: absolute;
+	top: 400px; 
+	left: 250px;
+}
+
+
+/*--- BLOCO 6 ---------------------------------------------------------------------------------------------*/
+.front #Section-6{
+	background:#fafafa url(../img/nuvem0.png) -100px 50px no-repeat;
+	text-align: center;
+} 
+
+
+
+
+/*--- RODAPE ---------------------------------------------------------------------------------------------*/
+
+.front footer{	
+	background:#1a4996;
+	color: #fff;
+	padding-top:50px;
+	padding-bottom:50px;
+	margin-top: 0;
+	font-size: 13px;
+}
+
+.front footer h2{margin-bottom: 20px;}
+
+.front footer p{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.front footer form label{color: #333;}
+
+.front footer form input[type="text"],
+.front footer form input[type="email"]{width: 100%;}
+
+.front footer .postit{text-align: center;}
