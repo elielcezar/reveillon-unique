@@ -1,6 +1,7 @@
 body{
 	padding: 0;	
 	background: #fff !important;	
+	color: #666;
 }
 
 .container{max-width: 1100px}
@@ -24,6 +25,24 @@ p{
 	margin: 20px 0;
 }
 
+h3{
+	text-align: center;
+	font-size: 26px;
+	letter-spacing: -1px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	padding-bottom: 15px;
+	background: transparent url("../img/bg_ttulo.png") bottom center no-repeat;	
+}
+
+h4{	
+	font-size: 18px;
+	letter-spacing: -1px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
 /* formularios */
 form label{
 	width: 100%;
@@ -40,6 +59,7 @@ form input[type="password"]{
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	border: 1px solid #d1d1d1;	
+	margin-bottom: 5px;
 }
 form input[type="submit"]{	
 	background: #dc6464;
@@ -48,11 +68,23 @@ form input[type="submit"]{
 	border: none;
 	padding: 12px; 
 	float: left;	
-	width: 100%;
-	margin-top: 20px;	
+	width: 100%;	
 	text-transform: uppercase;
 }
 form input[type="submit"]:hover{background: #c35151;}
+
+
+a.botao{	
+	background: #5c6881;
+	font-weight: bold;
+	color: #fff;
+	border: none;
+	padding: 12px; 
+	float: left;	
+	width: 100%;	
+	text-transform: uppercase;
+}
+a.botao:hover{background: #22324d;}
 
 /* animacoes */
 .delay4{
@@ -112,63 +144,87 @@ section{min-height: 200px;}
 /*--- MENU -------------------------------------------------------------------*/
 #menu-principal{		
 	text-align: center;	
-	float: none;	
-	font-family: 'Times New Roman', serif;
+	float: none;		
 }
 #menu-principal li{	
 	display: inline-block;
 	float: none;
 }
 #topnav{		
-	background: transparent url("../img/overlay.png");
+	background: #fff;
 	text-align: center;
 	border-bottom: none;
 	z-index: 1;		
 }
 #topnav a{
-	color: #fff;
+	color: #666;
+	font-weight: bold;
 	text-transform: uppercase;	
 }
 #topnav li.active a,
-#topnav a:hover{background: transparent url("../img/overlay.png");}
+#topnav a:hover{background: #f4f4f4;}
 
 
 /*--- TOPO -----------------------------------------------------------------------*/
 #topo{
-	padding-top: 100px;
+	padding: 60px 0 90px 0;
 	overflow: hidden;	
 	background: transparent url("../img/bg_topo.jpg") top center fixed no-repeat;
 }
-#topo .logo{margin-bottom: 75px;}
+#topo .logo{margin: 60px 0 85px 0;}
 
 
 /*--- EVENTO -----------------------------------------------------------------------*/
 #evento{	
 	text-align: center;
 	position: relative;
-	background: #fff url("../img/bg_branco.png") top center repeat-x;
-}
-#evento .logos{	
-	margin: auto;
-	max-width: 500px;	
-	margin-top: -60px;
-}
-
-#evento h3{
-	font-size: 48px;
-	font-style: italic;
-	letter-spacing: -1px;
-	margin-top: 70px;
-	font-weight: bold;
-	color: #d2d2d2;
+	padding: 60px 0;
+	background: #fff url("../img/bg_branco.png") top center repeat-x;	
 }
 
 
 /*--- ATRACOES -----------------------------------------------------------------------*/
 #atracoes{		
 	position: relative;		
-	text-align: center;
-	background: #fff url("../img/bg_cinza.png") bottom center repeat-x;
+	text-align: center;	
+	background: #fff url("../img/bg_generico3.jpg") bottom center fixed no-repeat;	
+	min-height: 850px;
+	padding-top: 50px;
+}
+
+#atracoes h3{
+	max-width: 450px;
+	display: inline-block;
+	margin: auto;	
+	font-size: 21px;
+	margin: 50px 0;
+	letter-spacing: -1px;
+	color: #fff;
+}
+
+#atracoes h3 strong{
+	font-size: 36px;
+	font-weight: bold;	
+	text-transform: uppercase;
+}
+
+#atracoes .papagaio,
+#atracoes .breno{
+	background: #f4f4f4;
+	padding: 20px;
+	border: 5px solid #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#atracoes .breno{float: right;}
+
+#atracoes .foto-perfil{
+	text-align: center;	
+	margin: auto;
+	max-width: 200px;
+	margin-top: -100px;
 }
 
 #atracoes p{text-align: justify;}
@@ -176,33 +232,51 @@ section{min-height: 200px;}
 
 /*--- CONTATO / RESERVAS -----------------------------------------------------------------------*/
 #contato{		
-	position: relative;		
-	text-align: center;
+	position: relative;			
 	padding: 80px;
-	background: transparent url("../img/bg_contato.jpg") bottom center no-repeat;
+	background: transparent url("../img/bg_generico2.jpg") bottom center fixed no-repeat;
 }
 
-#contato #contact-wrapper{	
-	width: 450px;
-	height: 500px;
-	background: #f4f4f4;
+#contato #contact-wrapper{			
+	width: 700px;
+	height: 425px;	
 	margin: auto;
-	padding: 25px 15px
+	padding: 25px 15px;
+	background: #f4f4f4;	
+	border: 5px solid #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+
+/*--- FOTOS -----------------------------------------------------------------------*/
+#fotos{		
+	padding: 40px 0;	
+	background: #fff;
+}
+#fotos img{
+	margin-bottom: 30px; 
+	border: 5px solid #f4f4f4;
+}
+#fotos img:hover{border: 5px solid #5c6881;}
+
+
+/*--- CONTAGEM -----------------------------------------------------------------------*/
+#contagem{		
+	padding: 40px 0;	
+	background: #fff;
+}
+
+/*--- COMO CHEGAR -----------------------------------------------------------------------*/
+#comochegar{		
+	padding-top: 30px;
+	background: #f4f4f4
 }
 
 
 
 /*--- RODAPE -------------------------------------------------------------------*/
-footer{	
-	border-top: 1px solid #ccc;
-	float: left;
-	width: 100%;
-	margin-top: 25px;
-	color: #666;
-	padding-top: 20px;
-	font-size: 11px;
-	line-height: 18px;
-}
-footer a{font-weight: bold;	}
+
 
 

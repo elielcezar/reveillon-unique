@@ -1,0 +1,47 @@
+.contador{
+	max-width: 900px;
+	margin: auto;
+	text-align: center;	
+	margin-bottom: 25px;    
+}
+.dsCountDown:after{
+	content:'';
+    clear: both;
+}
+.dsCountDown{	
+    display:inline-block;
+	*display: inline;
+    zoom: 1;    
+    padding-top: 50px;    
+}
+/* ------------------------- White Theme ------------------------- */
+.dsCountDown.ds-white {
+	color: #000;
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif, serif;
+	font-size: 1em;
+	padding: 10px;	
+}
+.ds-white .ds-element {
+	float: left;
+	margin-right: 8px;
+	text-align: center;
+	border-right: 1px solid #dedede;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+.dsCountDown.ds-white > .ds-element.ds-element-seconds {
+	margin-right: 0;
+	padding-right: 0;
+	border-right: 0;
+}
+.ds-white .ds-element-title {
+	font-size: 2em;
+	text-transform: lowercase;
+	color: #ccc;
+}
+.ds-white .ds-element-value {
+	font-size: 5em;
+	color: #666;	
+	font-weight: bold;	
+}

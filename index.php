@@ -56,7 +56,6 @@ if(isset($_POST['submit'])) {
 	<head>
  
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!--link rel="shortcut icon" href="http://famacorseguros.com.br/sites/default/files/favicon.png" type="image/png" /-->
 <title>Reveillon Unique</title>
 	
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,6 +64,9 @@ if(isset($_POST['submit'])) {
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/animate.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+<link href="css/contador.css" rel="stylesheet">
+
 <link href="css/geral.css" rel="stylesheet">
 
 <!--[if lt IE 7]>
@@ -94,9 +96,9 @@ if(isset($_POST['submit'])) {
        <ul id="menu-principal" class="nav navbar-nav">
           <li class="active"><a href="#topo">Home</a></li>
           <li><a data-toggle="pill" href="#evento">O Evento</a></li>
-          <li><a data-toggle="pill" href="#atracoes">Atrações</a></li> 
-          <li><a data-toggle="pill" href="#contato">Contato</a></li> 
+          <li><a data-toggle="pill" href="#atracoes">Atrações</a></li>           
           <li><a data-toggle="pill" href="#fotos">Fotos</a></li>
+          <li><a data-toggle="pill" href="#contato">Contato</a></li> 
           <li><a data-toggle="pill" href="#comochegar">Como Chegar</a></li>           
       </ul>  
 
@@ -116,7 +118,7 @@ if(isset($_POST['submit'])) {
          <img src="img/reveillon_unique.png" class="img-responsive" />
       </div>  
 
-      <img src="img/aba01.png" class="img-responsive aba"/>
+      <!--img src="img/aba01.png" class="img-responsive aba"/-->
 
 		</div>
 </section>
@@ -127,15 +129,15 @@ if(isset($_POST['submit'])) {
 <section id="evento">
     <div class="container">  
          
-          <div class="logos">
+          <!--div class="logos">
             <div class="row">
                 <div class="col-sm-6 logo1"><img src="img/logo_bobz.png" class="img-responsive logo-bobz" /></div>
                 <div class="col-sm-6 logo2"><img src="img/logo_manati.png" class="img-responsive logo-manati" /></div>
             </div>
-          </div>
+          </div-->
 
           <div class="row">  
-              <h3>O reveillon exclusivo da Barra grande!</h3>                                
+             <img src="img/slogan4.png" class="img-responsive aba"/>
           </div>       
 
         
@@ -148,24 +150,28 @@ if(isset($_POST['submit'])) {
 <section id="atracoes">
     <div class="container">
         
-            <div class="row">                
-                <img src="img/papagaio_breno.png" class="img-responsive" />
-                <h3>Sounded by DJ Papagaio &amp; Breno Morais (Sax)</h3>           
+            <div class="row">                                
+                <h3>Sounded by <br/> <strong>DJ Papagaio &amp; <br /> Breno Morais (Sax)</strong></h3>           
             </div>
 
             <div class="row releases">                
 
               <div class="col-sm-5 papagaio">
+                <div class="foto-perfil"><img src="img/papagaio.png" class="img-responsive" /></div>
                 <p>Quase 30 anos de experiência e muita versatilidade. É essa trajetória que o DJ Papagaio leva para as pistas como um dos principais nomes da música eletrônica no Rio de Janeiro.</p>                
                 <p>Desde 2001, Papagaio une as batidas eletrônicas com instrumentos acústicos em live sessions de sucesso. Desde a primeira experiência, junto com o percussionista Ricardo Siri para um projeto da Bacardi até performances atuais ao lado do saxofonista Breno Morais, o DJ se reinventa em projetos como o A.pair.2.play em parceria com Donatinho e Metaux, com Rodrigo Sha, que rendeu a faixa “Sueste Beach”, uma homenagem à Fernando de Noronha.</p>
+                <!--iframe width="100%" height="315" src="//www.youtube.com/embed/fFdYnjCTTjE" frameborder="0" allowfullscreen></iframe-->
+                <a class="botao" href="https://www.youtube.com/watch?v=fFdYnjCTTjE" target="_blank">Conheça o som do DJ Papagaio</a>
               </div>
 
-              <div class="col-sm-2 breno"></div>
-
               <div class="col-sm-5 breno">
-                <p>Do chorinho à house music, passando pelo jazz, samba e MPB em quatro tempos. Se há uma palavra que define o trabalho do saxofonista e flautista Breno Morais, é versatilidade. Atuando como músico há 20 anos, Morais mescla uma gama de projetos que, juntos, traduzem as influências mais variadas.</p>
-                <p>Breno quer mais é experimentar e vivenciar a música em toda a sua plenitude – e o alicerce é a qualidade. “Essa coisa de trabalhar com vários estilos parte do lidar com músicas e ideias boas, sempre buscando transmitir uma vibe bacana”, conta.</p>
+                <div class="foto-perfil"><img src="img/breno.png" class="img-responsive" /></div>
+                <p>Do chorinho à house music, passando pelo jazz, samba e MPB em quatro tempos. Se há uma palavra que define o trabalho do saxofonista e flautista Breno Morais, é versatilidade. Atuando como músico há 20 anos, Morais mescla uma gama de projetos que, juntos, traduzem as influências mais variadas.</p>                
                 <p>Envolvido com música desde sempre, a vontade de explorar novas vertentes demarca um novo momento na carreira do músico, denotando caminhos experimentais em uma trajetória já de muita experiência. Fôlego é o que não falta!</p>
+                <br />
+                <br />
+                <a class="botao" href="https://soundcloud.com/brenomorais" target="_blank">Conheça o som de Breno Morais</a>
+                <!--iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/10163151&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe-->
               </div>
 
             </div>
@@ -174,78 +180,109 @@ if(isset($_POST['submit'])) {
 </section>
 <!-- / SECTION-2 -->
 
-
-<!--  SECTION-3 -->  
-<section id="contato">
-    <div class="container">        
-            <div class="row">
-
-                  <div id="contact-wrapper">
-
-                    <h1>Solicite já a sua Reserva!</h1>
-
-                    <?php if(isset($hasError)) { //If errors are found ?>
-                        <p class="error">Por favor, preencha todos os campos.</p>
-                    <?php } ?>                                      
-
-                    <?php if(isset($_SESSION['mensagem'])) { //If email is sent ?>
-                        <div class="mensagemForm">
-                            <p><strong>Mensagem enviada com sucesso!</strong></p>
-                            <p>Obrigado por entrar em contato. Sua mensagem será respondida o mais rápido possível.</p>
-                        </div>
-                    <?php } ?>
-
-                    <?php unset($_SESSION['mensagem']); ?>
-
-                    <form method="post" action="http://reveillonunique.com.br/site/#contato" method="post" id="contactform">
-                        <div class="nome">
-                            <label for="name"><strong>Nome:</strong></label>
-                            <input type="text" size="50" name="contactname" id="contactname" value="" class="required" />
-                        </div>
-
-                        <div class="email">
-                            <label for="email"><strong>Email:</strong></label>
-                            <input type="text" size="50" name="email" id="email" value="" class="required email" />
-                        </div>                                            
-
-                        <div class="mensagem">
-                            <label for="message"><strong>Mensagem:</strong></label>
-                            <textarea rows="5" cols="50" name="message" id="message" class="required"></textarea>
-                        </div>
-                        <input type="submit" value="Enviar" name="submit" class="submit" />
-                    </form>
-
-                </div>           
-            </div>              
-     </div><!-- / CONTAINER-->
-</section>
-<!-- / SECTION-3 -->
-
-
 <!--  SECTION-4 -->  
 <section id="fotos">
-    <div class="container">
-        <div class="wrapper">      
-            <div class="row">
+    <div class="container"> 
+
+          <h3>Conheça o Local</h3> 
+
+            <div class="row">            
                 
-                <h1>Fotos</h1>
+                <div class="col-sm-3"><a class="fancybox" rel="galleria" href="img/img_001.jpg"><img src="img/thumb_001.jpg" class="img-responsive" /></a></div>
+                <div class="col-sm-3"><a class="fancybox" rel="galleria" href="img/img_002.jpg"><img src="img/thumb_002.jpg" class="img-responsive" /></a></div>
+                <div class="col-sm-3"><a class="fancybox" rel="galleria" href="img/img_003.jpg"><img src="img/thumb_003.jpg" class="img-responsive" /></a></div>
+                <div class="col-sm-3"><a class="fancybox" rel="galleria" href="img/img_004.jpg"><img src="img/thumb_004.jpg" class="img-responsive" /></a></div>
+                <div class="col-sm-3"><a class="fancybox" rel="galleria" href="img/img_005.jpg"><img src="img/thumb_005.jpg" class="img-responsive" /></a></div>
+                <div class="col-sm-3"><a class="fancybox" rel="galleria" href="img/img_006.jpg"><img src="img/thumb_006.jpg" class="img-responsive" /></a></div>
+
+                
            
             </div>       
-        </div><!-- line --> 
+        
      </div><!-- / CONTAINER-->
 </section>
 <!-- / SECTION-4 -->
 
 
+<!--  SECTION-3 -->  
+<section id="contato">
+    <div class="container">        
+            
+
+                  <div id="contact-wrapper">
+
+                    <h3>Informações e Ingressos:</h3>                   
+
+                    <div class="row">
+                       <div class="col-sm-6">
+                          <div class="info">   
+                              <p><strong>BobZ Boutique Resort:</strong> <br />86 8103 6907 ou 11 96066 7600 </p>
+                              <p><strong>Pousada Manati:</strong><br /> 86 3369-8100 / 8165-1205 / 9827-3619 </p>
+                              <p><strong>Contato:</strong><br /> euvou@reveillonunique.com.br</p>
+                          </div>
+                      </div>
+
+                      <div class="col-sm-6">
+
+                            <?php if(isset($hasError)) { //If errors are found ?>
+                                <p class="error">Por favor, preencha todos os campos.</p>
+                            <?php } ?>                                      
+
+                            <?php if(isset($_SESSION['mensagem'])) { //If email is sent ?>
+                                <div class="mensagemForm">
+                                    <p><strong>Mensagem enviada com sucesso!</strong></p>
+                                    <p>Obrigado por entrar em contato. Sua mensagem será respondida o mais rápido possível.</p>
+                                </div>
+                            <?php } ?>
+
+                            <?php unset($_SESSION['mensagem']); ?>
+
+                            <form method="post" action="http://reveillonunique.com.br/site/#contato" method="post" id="contactform">
+                                <div class="nome">                                    
+                                      <input type="text" size="50" name="contactname" id="contactname" value="" class="required" placeholder="Nome" />                                   
+                                </div>
+
+                                <div class="email">                                    
+                                    <input type="text" size="50" name="email" id="email" value="" class="required email" placeholder="Email" />
+                                </div>                                            
+
+                                <div class="mensagem">                                    
+                                    <textarea rows="5" cols="50" name="message" id="message" class="required" placeholder="Mensagem"></textarea>
+                                </div>
+                                <input type="submit" value="Enviar" name="submit" class="submit" />
+                            </form>
+
+                      </div>
+                     
+                  </div>           
+              </div>              
+      </div><!-- / CONTAINER-->
+</section>
+<!-- / SECTION-3 -->
+
+
+<section id="contagem">
+
+  <div class="container">
+        <h3>Faltam</h3>
+        <div class="contador">  
+          <div class="demo6"></div>
+        </div>
+  </div>
+
+</section>
+
+
+
 <!--  SECTION-5 -->  
-<section id="comochegar">        
-           
-                
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15938.576563255863!2d-41.38421276462989!3d-2.918292119885384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ec05bfc98b9a9f%3A0xaf7fd780f980919d!2sBarrinha+-+PI!5e0!3m2!1spt-BR!2sbr!4v1416505442367" width="100%" height="600" frameborder="0" style="border:0"></iframe>
-           
-           
+<section id="comochegar">  
+    <h3>Como Chegar</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15938.576563255863!2d-41.38421276462989!3d-2.918292119885384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ec05bfc98b9a9f%3A0xaf7fd780f980919d!2sBarrinha+-+PI!5e0!3m2!1spt-BR!2sbr!4v1416505442367" width="100%" height="400" frameborder="0" style="border:0"></iframe>
 </section>
 <!-- / SECTION-5 -->
+
+
+
  
       
 <!-- FOOTER -->
@@ -272,43 +309,68 @@ if(isset($_POST['submit'])) {
 <script src="js/jquery.localscroll-1.2.7-min.js" type="text/javascript" ></script>
 <script src="js/jquery.scrollTo-1.4.6-min.js" type="text/javascript" ></script>
 
+
 <script src="sites/all/themes/famacor2014/js/geral.js" type="text/javascript"></script>
 
+
+<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
+
+
+<script type="text/javascript" src="js/dscountdown.js"></script>
+
+  
 <script>
-jQuery(document).ready(function(){
-	jQuery('#topnav').localScroll({offset: {top:0}});
+$(document).ready(function(){
+
+  $('.fancybox').fancybox();
+
+	$('#topnav').localScroll({offset: {top:0}});
 
 	//.parallax(xPosition, speedFactor, outerHeight) options:
 	//xPosition - Horizontal position of the element
 	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
 	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-	
-	jQuery('#Section-2').parallax("1%", 1);
-	jQuery('#Section-3').parallax("90%", 1);
-  jQuery('#Section-4').parallax("1%", 1);
-  jQuery('#Section-5').parallax("200%", 1);
-  jQuery('#Section-6').parallax("1%", 1);
-
+	/*$('#Section-2').parallax("1%", 1);
+	$('#Section-3').parallax("90%", 1);
+  $('#Section-4').parallax("1%", 1);
+  $('#Section-5').parallax("200%", 1);
+  $('#Section-6').parallax("1%", 1);*/
 
 })
 </script>
-<!-- NICE Scroll plugin -->
 
+
+<!-- NICE Scroll plugin -->
 <script>
-	jQuery(document).ready(
+	$(document).ready(
   function() {  
     jQuery("html").niceScroll({cursorcolor:"#000"});
   }
 );
 </script>
 
+
 <script>
 //hide menu after click on mobile
-jQuery('.navbar .nav > li > a').click(function(){
-		jQuery('.navbar-collapse.navbar-ex1-collapse.in').removeClass('in').addClass('collapse').css('height', '0');
-
-		});
+$('.navbar .nav > li > a').click(function(){
+		$('.navbar-collapse.navbar-ex1-collapse.in').removeClass('in').addClass('collapse').css('height', '0');
+});
 </script>
+
+
+<script>
+jQuery(document).ready(function($){
+$('.demo6').dsCountDown({
+  endDate: new Date("December 31, 2014 23:59:59"),
+  titleDays: 'Dias',
+  titleHours: 'Horas',
+  titleMinutes: 'Minutos',
+  titleSeconds: 'Segundos'
+  });
+});
+</script>
+
 
 <script src="js/jquery.inview.js"></script>
 <!--[if !IE]><!-->
