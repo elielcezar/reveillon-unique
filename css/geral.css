@@ -25,11 +25,16 @@ p{
 }
 
 /* formularios */
+form label{
+	width: 100%;
+	padding: 10px 0;	
+}
 form input[type="text"],
 form textarea,
 form select,
 form .form-email,
 form input[type="password"]{
+	width: 100%;
 	padding: 7px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -37,17 +42,17 @@ form input[type="password"]{
 	border: 1px solid #d1d1d1;	
 }
 form input[type="submit"]{	
-	background: #4c71be;
+	background: #dc6464;
 	font-weight: bold;
 	color: #fff;
 	border: none;
-	padding: 6px; 
-	float: left;
-	border-radius: 5px;
+	padding: 12px; 
+	float: left;	
+	width: 100%;
+	margin-top: 20px;	
+	text-transform: uppercase;
 }
-form input[type="submit"]:hover{
-	background: #163d8e;	
-}
+form input[type="submit"]:hover{background: #c35151;}
 
 /* animacoes */
 .delay4{
@@ -125,7 +130,7 @@ section{min-height: 200px;}
 	text-transform: uppercase;	
 }
 #topnav li.active a,
-#topnav a:hover{background: #666;}
+#topnav a:hover{background: transparent url("../img/overlay.png");}
 
 
 /*--- TOPO -----------------------------------------------------------------------*/
@@ -169,13 +174,21 @@ section{min-height: 200px;}
 #atracoes p{text-align: justify;}
 
 
-/*--- CONTATO -----------------------------------------------------------------------*/
+/*--- CONTATO / RESERVAS -----------------------------------------------------------------------*/
 #contato{		
 	position: relative;		
 	text-align: center;
-	background: #fff url("../img/bg_contato.jpg") top center no-repeat;
+	padding: 80px;
+	background: transparent url("../img/bg_contato.jpg") bottom center no-repeat;
 }
 
+#contato #contact-wrapper{	
+	width: 450px;
+	height: 500px;
+	background: #f4f4f4;
+	margin: auto;
+	padding: 25px 15px
+}
 
 
 

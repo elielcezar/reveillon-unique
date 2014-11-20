@@ -1,4 +1,56 @@
+<?php session_start();?>
+<?php
+//If the form is submitted
+if(isset($_POST['submit'])) {
 
+    //Check to make sure that the name field is not empty
+    if(trim($_POST['contactname']) == '') {
+        $hasError = true;
+    } else {
+        $name = trim($_POST['contactname']);
+    }   
+
+    //Check to make sure sure that a valid email address is submitted
+    if(trim($_POST['email']) == '')  {
+        $hasError = true;
+    } else if (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['email']))) {
+        $hasError = true;
+    } else {
+        $email = trim($_POST['email']);
+    }
+
+    //Check to make sure comments were entered
+    if(trim($_POST['message']) == '') {
+        $hasError = true;
+    } else {
+        if(function_exists('stripslashes')) {
+            $comments = stripslashes(trim($_POST['message']));
+        } else {
+            $comments = trim($_POST['message']);
+        }
+    }
+
+    //If there is no error, send the email
+    if(!isset($hasError)) {        
+
+        $emailTo = "elielcezar@gmail.com";
+
+        $subject = "[Reveillon Unique] - Contato Pelo Site";       
+
+        $body = "Nome: $name \nEmail: $email \n\nMensagem:\n $comments";
+
+        $headers = "From: [M2E] - Contato Pelo Site <".$emailTo.">" . "\r\n" . "Reply-To:" . $email;
+
+        mail($emailTo, $subject, $body, $headers);
+
+        $emailSent = true; 
+
+        $_SESSION['mensagem']="ok";      
+      
+    }   
+
+}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -28,33 +80,33 @@
 
 	
 <nav id="topnav" class="navbar navbar-fixed-top navbar-default" role="navigation">
-		<div class="container">	  
-	  
+    <div class="container">       
     <div class="navbar-header">
-    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-    		  <span class="sr-only">Toggle navigation</span>
-    		  <span class="icon-bar"></span>
-    		  <span class="icon-bar"></span>
-    		  <span class="icon-bar"></span>
-    		</button>		
-	  </div>
-	 
-	  <div class="collapse navbar-collapse navbar-ex1-collapse">		
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>   
+    </div>
+   
+    <div class="collapse navbar-collapse navbar-ex1-collapse">    
        <ul id="menu-principal" class="nav navbar-nav">
           <li class="active"><a href="#topo">Home</a></li>
           <li><a data-toggle="pill" href="#evento">O Evento</a></li>
           <li><a data-toggle="pill" href="#atracoes">Atrações</a></li> 
-          <li><a data-toggle="pill" href="#reservas">Reservas</a></li> 
+          <li><a data-toggle="pill" href="#contato">Contato</a></li> 
           <li><a data-toggle="pill" href="#fotos">Fotos</a></li>
           <li><a data-toggle="pill" href="#comochegar">Como Chegar</a></li>           
       </ul>  
 
-	 </div><!-- /.navbar-collapse --> 
+   </div><!-- /.navbar-collapse --> 
  
-	</div>	
+  </div>  
 </nav>
 
 
+<div class="wrapper">
 
 <!-- HEADER --> 
 <section id="topo">
@@ -74,6 +126,7 @@
 <!--  SECTION-1 -->  
 <section id="evento">
     <div class="container">  
+         
           <div class="logos">
             <div class="row">
                 <div class="col-sm-6 logo1"><img src="img/logo_bobz.png" class="img-responsive logo-bobz" /></div>
@@ -82,11 +135,10 @@
           </div>
 
           <div class="row">  
-
-          <h3>O reveillon exclusivo da Barra grande!</h3>                       
-         
+              <h3>O reveillon exclusivo da Barra grande!</h3>                                
           </div>       
-        </div><!-- line --> 
+
+        
      </div><!-- / CONTAINER-->
 </section>
 <!-- / SECTION-1 -->
@@ -124,15 +176,47 @@
 
 
 <!--  SECTION-3 -->  
-<section id="reservas">
-    <div class="container">
-        <div class="wrapper">      
+<section id="contato">
+    <div class="container">        
             <div class="row">
-                
-                <h1>Reservas</h1>
-           
-            </div>       
-        </div><!-- line --> 
+
+                  <div id="contact-wrapper">
+
+                    <h1>Solicite já a sua Reserva!</h1>
+
+                    <?php if(isset($hasError)) { //If errors are found ?>
+                        <p class="error">Por favor, preencha todos os campos.</p>
+                    <?php } ?>                                      
+
+                    <?php if(isset($_SESSION['mensagem'])) { //If email is sent ?>
+                        <div class="mensagemForm">
+                            <p><strong>Mensagem enviada com sucesso!</strong></p>
+                            <p>Obrigado por entrar em contato. Sua mensagem será respondida o mais rápido possível.</p>
+                        </div>
+                    <?php } ?>
+
+                    <?php unset($_SESSION['mensagem']); ?>
+
+                    <form method="post" action="http://reveillonunique.com.br/site/#contato" method="post" id="contactform">
+                        <div class="nome">
+                            <label for="name"><strong>Nome:</strong></label>
+                            <input type="text" size="50" name="contactname" id="contactname" value="" class="required" />
+                        </div>
+
+                        <div class="email">
+                            <label for="email"><strong>Email:</strong></label>
+                            <input type="text" size="50" name="email" id="email" value="" class="required email" />
+                        </div>                                            
+
+                        <div class="mensagem">
+                            <label for="message"><strong>Mensagem:</strong></label>
+                            <textarea rows="5" cols="50" name="message" id="message" class="required"></textarea>
+                        </div>
+                        <input type="submit" value="Enviar" name="submit" class="submit" />
+                    </form>
+
+                </div>           
+            </div>              
      </div><!-- / CONTAINER-->
 </section>
 <!-- / SECTION-3 -->
@@ -154,16 +238,12 @@
 
 
 <!--  SECTION-5 -->  
-<section id="comochegar">
-    <div class="container">
-        <div class="wrapper">      
-            <div class="row">
-                
-                <h1>Como Chegar</h1>
+<section id="comochegar">        
            
-            </div>       
-        </div><!-- line --> 
-     </div><!-- / CONTAINER-->
+                
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15938.576563255863!2d-41.38421276462989!3d-2.918292119885384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ec05bfc98b9a9f%3A0xaf7fd780f980919d!2sBarrinha+-+PI!5e0!3m2!1spt-BR!2sbr!4v1416505442367" width="100%" height="600" frameborder="0" style="border:0"></iframe>
+           
+           
 </section>
 <!-- / SECTION-5 -->
  
@@ -179,6 +259,10 @@
 		</div>
 </footer>
 <!-- / FOOTER -->
+
+
+</div><!-- wrapper -->
+
 
    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
