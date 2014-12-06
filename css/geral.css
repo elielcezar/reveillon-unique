@@ -161,8 +161,24 @@ section{min-height: 200px;}
 	font-weight: bold;
 	text-transform: uppercase;	
 }
+
 #topnav li.active a,
 #topnav a:hover{background: #f4f4f4;}
+
+#topnav li.facebook,
+#topnav li.instagram{
+	padding: 0 10px;	
+}
+
+#topnav li.facebook a,
+#topnav li.instagram a{
+	text-indent: -5000em;	
+	width: 30px;
+	height: 50px;
+	display: block;				
+}
+#topnav li.facebook a{background: transparent url("../img/fb_icon.jpg") top center no-repeat;}
+#topnav li.instagram a{	background: transparent url("../img/instagram_icon.jpg") top center no-repeat;}
 
 
 /*--- TOPO -----------------------------------------------------------------------*/
@@ -237,9 +253,17 @@ section{min-height: 200px;}
 	background: transparent url("../img/bg_generico2.jpg") bottom center fixed no-repeat;
 }
 
+#contato .mensagens{
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin: -20px 0 30px 0;
+}
+
+
 #contato #contact-wrapper{			
 	width: 700px;
-	height: 425px;	
+	min-height: 425px;	
 	margin: auto;
 	padding: 25px 15px;
 	background: #f4f4f4;	
@@ -262,6 +286,15 @@ section{min-height: 200px;}
 #fotos img:hover{border: 5px solid #5c6881;}
 
 
+/*--- DRNKS -----------------------------------------------------------------------*/
+#drinks{			
+	color: #fff;
+	text-align: center;
+	padding: 80px 0;
+	background: #040114 url("../img/bg_drinks.jpg") bottom center fixed no-repeat;
+}
+
+
 /*--- CONTAGEM -----------------------------------------------------------------------*/
 #contagem{		
 	padding: 40px 0;	
@@ -271,7 +304,7 @@ section{min-height: 200px;}
 /*--- COMO CHEGAR -----------------------------------------------------------------------*/
 #comochegar{		
 	padding-top: 30px;
-	background: #f4f4f4
+	background: #fff
 }
 
 

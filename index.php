@@ -39,7 +39,7 @@ if(isset($_POST['submit'])) {
 
         $body = "Nome: $name \nEmail: $email \n\nMensagem:\n $comments";
 
-        $headers = "From: [M2E] - Contato Pelo Site <".$emailTo.">" . "\r\n" . "Reply-To:" . $email;
+        $headers = "From: [Reveillon Unique] - Contato Pelo Site <".$emailTo.">" . "\r\n" . "Reply-To:" . $email;
 
         mail($emailTo, $subject, $body, $headers);
 
@@ -99,7 +99,9 @@ if(isset($_POST['submit'])) {
           <li><a data-toggle="pill" href="#atracoes">Atrações</a></li>           
           <li><a data-toggle="pill" href="#fotos">Fotos</a></li>
           <li><a data-toggle="pill" href="#contato">Contato</a></li> 
-          <li><a data-toggle="pill" href="#comochegar">Como Chegar</a></li>           
+          <li><a data-toggle="pill" href="#comochegar">Como Chegar</a></li>
+          <li class="facebook"><a href="https://www.facebook.com/ReveillonUnique?fref=ts" target="_blank">Facebook</a></li>                     
+          <li class="instagram"><a href="http://instagram.com/reveillonunique" target="_blank">Instagram</a></li>
       </ul>  
 
    </div><!-- /.navbar-collapse --> 
@@ -204,14 +206,50 @@ if(isset($_POST['submit'])) {
 <!-- / SECTION-4 -->
 
 
+<section id="drinks">
+
+  <div class="container">
+        <img src="img/drinks.png" class="img-responsive" />
+        <h3>DRINKS COM VODKA BELVEDERE, VEUVE CLICQUOT E WHISKY OLD PARR!</h3>
+  </div>
+
+</section>
+
+
+<section id="contagem">
+
+  <div class="container">
+        <h3>Faltam</h3>
+        <div class="contador">  
+          <div class="demo6"></div>
+        </div>
+  </div>
+
+</section>
+
 <!--  SECTION-3 -->  
 <section id="contato">
-    <div class="container">        
-            
+    <div class="container">  
 
                   <div id="contact-wrapper">
 
-                    <h3>Informações e Ingressos:</h3>                   
+                    <h3>Informações e Ingressos:</h3>  
+
+                    <div class="mensagens">
+
+                    <?php if(isset($hasError)) { //If errors are found ?>
+                                <span class="error">Por favor, preencha todos os campos.</span>
+                            <?php } ?>                                      
+
+                            <?php if(isset($_SESSION['mensagem'])) { //If email is sent ?>
+                                <div class="mensagemForm">
+                                    <span><strong>Mensagem enviada com sucesso!</strong></span><br />
+                                    <span>Obrigado por entrar em contato. Sua mensagem será respondida o mais rápido possível.</span>
+                                </div>
+                            <?php } ?>
+
+                            <?php unset($_SESSION['mensagem']); ?>                 
+                    </div>
 
                     <div class="row">
                        <div class="col-sm-6">
@@ -222,20 +260,7 @@ if(isset($_POST['submit'])) {
                           </div>
                       </div>
 
-                      <div class="col-sm-6">
-
-                            <?php if(isset($hasError)) { //If errors are found ?>
-                                <p class="error">Por favor, preencha todos os campos.</p>
-                            <?php } ?>                                      
-
-                            <?php if(isset($_SESSION['mensagem'])) { //If email is sent ?>
-                                <div class="mensagemForm">
-                                    <p><strong>Mensagem enviada com sucesso!</strong></p>
-                                    <p>Obrigado por entrar em contato. Sua mensagem será respondida o mais rápido possível.</p>
-                                </div>
-                            <?php } ?>
-
-                            <?php unset($_SESSION['mensagem']); ?>
+                      <div class="col-sm-6">                            
 
                             <form method="post" action="http://reveillonunique.com.br/site/#contato" method="post" id="contactform">
                                 <div class="nome">                                    
@@ -252,6 +277,9 @@ if(isset($_POST['submit'])) {
                                 <input type="submit" value="Enviar" name="submit" class="submit" />
                             </form>
 
+                        
+
+
                       </div>
                      
                   </div>           
@@ -261,16 +289,7 @@ if(isset($_POST['submit'])) {
 <!-- / SECTION-3 -->
 
 
-<section id="contagem">
 
-  <div class="container">
-        <h3>Faltam</h3>
-        <div class="contador">  
-          <div class="demo6"></div>
-        </div>
-  </div>
-
-</section>
 
 
 
@@ -334,8 +353,7 @@ $(document).ready(function(){
 	/*$('#Section-2').parallax("1%", 1);
 	$('#Section-3').parallax("90%", 1);
   $('#Section-4').parallax("1%", 1);
-  $('#Section-5').parallax("200%", 1);
-  $('#Section-6').parallax("1%", 1);*/
+  $('#Section-5').parallax("200%", 1);*/  
 
 })
 </script>
